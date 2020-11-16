@@ -1,7 +1,7 @@
 const map = d3.select("#map");
 
 const requestData7 = async() => {
-	const europeData = await d3.json("europe.topojson");
+	const europeData = await d3.json("/static/js/europe.topojson");
 	var countries = topojson.feature(europeData, europeData.objects.europe);
 
 	var projection = d3.geoMercator().fitSize([500,500],countries);
